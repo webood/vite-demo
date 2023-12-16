@@ -8,8 +8,10 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "prettier:src": "prettier  --write \"src/**/*.{ts,js,vue}\"",
+    "lint:prettier": "prettier  --write \"src/**/*.{ts,js,vue}\"",
     "prettier": "prettier  --write .",
     "eslint:src": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
+    "lint:eslint": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
     "lint:lint-staged": "lint-staged",
     "prepare": "husky install"
   },
