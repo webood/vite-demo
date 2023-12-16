@@ -1,5 +1,5 @@
 <template>
-  <div>测 试</div>
+  <d iv>测 试</d>
   <div>
     <span> {{ a }}</span>
   </div>
