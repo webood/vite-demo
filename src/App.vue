@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-var a = ref(3);
+let a = ref(3);
 </script>
 
 <style scoped>

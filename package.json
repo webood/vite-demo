@@ -10,6 +10,7 @@
     "prettier:src": "prettier  --write \"src/**/*.{ts,js,vue}\"",
     "prettier": "prettier  --write .",
     "eslint:src": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
+    "lint:lint-staged": "lint-staged",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,9 +26,31 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.19.2",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vue-tsc": "^1.8.25"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "npm run prettier"
+    ],
+    "*.md": [
+      "npm run prettier"
+    ]
   }
 }
