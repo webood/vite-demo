@@ -7,6 +7,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+
 let a = ref(3);
 </script>
 
