@@ -13,6 +13,7 @@
     "eslint:src": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
     "lint:eslint": "eslint \"src/**/*.{ts,js,vue}\" \"src/main.ts\"",
     "lint:lint-staged": "lint-staged",
+    "commit": "git pull && git add -A && git-cz && git push",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,6 +26,8 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-vue": "^4.5.2",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.8.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
@@ -56,5 +59,10 @@
     "*.md": [
       "npm run prettier"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
